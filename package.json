@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src",
+    "eject": "vuepress eject src"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "vuepress": "^0.14.10"
+  },
+  "dependencies": {
+    "eslint-plugin-vue-libs": "^3.0.0"
+  }
+}
