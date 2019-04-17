@@ -1,18 +1,18 @@
 <template>
     <div class="features">
-        <h2 class="features__headline">{{header}}</h2>
+        <h2 class="features__headline heya--type-h3">{{header}}</h2>
         <ul
             class="features__list"
             :class="alternateClass"
         >
             <li v-for="feature in features">
-                <h3>{{feature.header}}</h3>
-                <p v-if="feature.summary">{{feature.summary}}</p>
+                <h3 class="heya--type-h4">{{feature.header}}</h3>
+                <p class="heya--type-body1" v-if="feature.summary">{{feature.summary}}</p>
                 <ul
                     v-if="feature.list"
                     v-for="item in feature.list"
                 >
-                    <li>{{item}}</li>
+                    <li class="heya--type-body2">{{item}}</li>
                 </ul>
             </li>
         </ul>
@@ -31,3 +31,7 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+
+</style>

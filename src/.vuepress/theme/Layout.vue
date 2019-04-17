@@ -7,7 +7,6 @@
     <div
       v-if="$page.frontmatter.layout"
     >
-    {{ layout }}
       <component :is="layout"/>
     </div>
     <Footer />
@@ -15,6 +14,9 @@
 </template>
 
 <script>
+require('normalize.css');
+require('./styles/global.scss');
+
 import Vue from 'vue'
 import Header from './components/global/Header.vue'
 import Footer from './components/global/Footer.vue'

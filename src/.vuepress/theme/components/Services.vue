@@ -7,8 +7,8 @@
                 :class="iconClass(service.icon)"
             >
             </span>
-            <h2>{{service.header}}</h2>
-            <p>{{service.summary}}</p>
+            <h2 class="heya--type-h3">{{service.header}}</h2>
+            <p class="heya--type-body1">{{service.summary}}</p>
         </li>
     </ul>
 </template>
