@@ -1,6 +1,6 @@
 <template>
-    <ul class="services">
-        <li v-for="service in services">
+    <ul class="services" :class="alternateClass">
+        <li class="services__item" v-for="service in services">
             <span
                 class="service__icon"
                 v-if="service.icon"
@@ -21,6 +21,7 @@ export default {
     alternateClass () {
       return typeof this.alternate !== 'undefined' || this.alternate !== null ? 'services--alt' : ''
     },
+
   },
   methods: {
 
@@ -32,3 +33,19 @@ export default {
 }
 </script>
 
+<style lang="scss">
+@import '../styles/colors';
+@import '../styles/layout';
+@import '../styles/spacing';
+
+.services {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.services__item {
+    margin: 0;
+    padding: 0;
+}
+</style>

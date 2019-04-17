@@ -1,4 +1,4 @@
 module.exports = {
-    title: 'Heya',
-    description: 'Heya LLC Site'
+    title: 'Heya | Experience Engineering',
+    description: 'A digital practice bridging the gap between insights and execution for marketing, engineering and design teams at scale.'
 }

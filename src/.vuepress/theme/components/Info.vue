@@ -1,5 +1,5 @@
 <template>
-    <section class="info" id="services">
+    <section class="info" :class="alternateClass" :id="label">
         <header
             class="info__intro"
             v-if="info.intro"
@@ -36,9 +36,33 @@ export default {
     components: { Features, Services },
     props: ['alternate', 'info',],
     computed: {
+
+        alternateClass () {
+            return this.alternate === true ? 'info--alt' : ''
+        },
+
         jumpTitle() {
             return 'Jump to:' + this.info.intro.label
+        },
+
+        label() {
+            return this.info.intro.label.toLowerCase()
         }
     }
 }
 </script>
+
+<style lang="scss">
+@import '../styles/colors';
+@import '../styles/layout';
+@import '../styles/spacing';
+
+.info {
+  padding: $layout-lg $spacing-md;
+}
+
+.info--alt {
+    background-color: $dark-sienna;
+    color: white;
+}
+</style>

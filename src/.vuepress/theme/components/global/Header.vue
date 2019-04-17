@@ -1,5 +1,5 @@
 <template>
-    <header>
+    <header class="site-header">
       <p>Development in progress... Please excuse the ugly.</p>
         <Icon />
         <h1 class="heya--type-h1">
@@ -23,5 +23,9 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../../styles/spacing';
 
+.site-header {
+  padding: 0 $spacing-md;
+}
 </style>

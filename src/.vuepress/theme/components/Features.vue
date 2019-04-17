@@ -5,14 +5,15 @@
             class="features__list"
             :class="alternateClass"
         >
-            <li v-for="feature in features">
+            <li class="features__list-item" v-for="feature in features">
                 <h3 class="heya--type-h4">{{feature.header}}</h3>
                 <p class="heya--type-body1" v-if="feature.summary">{{feature.summary}}</p>
                 <ul
+                    class="features__sub-list"
                     v-if="feature.list"
                     v-for="item in feature.list"
                 >
-                    <li class="heya--type-body2">{{item}}</li>
+                    <li class="features__sub-list-item heya--type-body2">{{item}}</li>
                 </ul>
             </li>
         </ul>
@@ -25,7 +26,7 @@ export default {
   computed: {
 
     alternateClass () {
-      return typeof this.alternate !== 'undefined' || this.alternate !== null ? 'features__list--alt' : ''
+      return this.alternate === true ? 'features__list--alt' : ''
     },
 
   }
@@ -33,5 +34,43 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../styles/colors';
+@import '../styles/layout';
+@import '../styles/spacing';
 
+.features__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @include breakpoint(bp--sm) {
+        column-count: 2;
+        column-fill: balance;
+    }
+}
+
+.features__list--alt {
+    @include breakpoint(bp--sm) {
+        column-count: 3;
+    }
+}
+
+.features__list-item {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+
+    break-inside: avoid;
+}
+
+.features__sub-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.features__sub-list-item {
+    margin: 0;
+    padding: 0;
+}
 </style>

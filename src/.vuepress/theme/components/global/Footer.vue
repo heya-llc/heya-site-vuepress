@@ -1,5 +1,5 @@
 <template>
-    <footer>
+    <footer class="site-footer">
         <p class="heya--type-body1">
             <Logo />
             Connecting the dots between insights and execution can be a daunting proposition.
@@ -24,4 +24,12 @@ export default {
     Icon
   }
 }
-  </script>
+</script>
+
+<style lang="scss">
+@import '../../styles/spacing';
+
+.site-footer {
+  padding: 0 $spacing-md;
+}
+</style>

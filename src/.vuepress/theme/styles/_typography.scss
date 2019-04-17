@@ -61,6 +61,10 @@ $typescale-map: (
     letter-spacing: -0.5px;
 }
 
+body {
+    color: $raisin-black;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: $font-family-serif;
 }
@@ -144,54 +148,59 @@ a {
 
 h1,
 .#{$prefix}--type-h1 {
-    @include typescale('h1');
-    line-height: rem(94px);
-    letter-spacing: rem(-1.5px);
+    @include typescale('h3');
+    line-height: rem(50px);
     font-weight: bold;
 
     @include breakpoint(bp--sm) {
         @include typescale('h1');
+        line-height: rem(94px);
+        letter-spacing: rem(-1.5px);
     }
 }
 
 h2,
 .#{$prefix}--type-h2 {
-    @include typescale('h2');
-    line-height: rem(71px);
-    letter-spacing: rem(-0.5px);
-    font-weight: bold;
-
-    @include breakpoint(bp--sm) {
-        @include typescale('h2');
-    }
-}
-
-h3,
-.#{$prefix}--type-h3 {
-    @include typescale('h3');
-    line-height: rem(50px);
-    font-weight: 600;
-
-    @include breakpoint(bp--sm) {
-        @include typescale('h3');
-    }
-}
-
-h4,
-.#{$prefix}--type-h4 {
     @include typescale('h4');
     line-height: rem(33px);
     letter-spacing: rem(0.25px);
     font-weight: bold;
 
     @include breakpoint(bp--sm) {
+        @include typescale('h2');
+        line-height: rem(71px);
+        letter-spacing: rem(-0.5px);
+    }
+}
+
+h3,
+.#{$prefix}--type-h3 {
+    @include typescale('h5');
+    line-height: normal;
+    font-weight: 600;
+
+    @include breakpoint(bp--sm) {
+        @include typescale('h3');
+        line-height: rem(50px);
+    }
+}
+
+h4,
+.#{$prefix}--type-h4 {
+    @include typescale('h6');
+    line-height: normal;
+    font-weight: bold;
+
+    @include breakpoint(bp--sm) {
         @include typescale('h4');
+        line-height: rem(33px);
+        letter-spacing: rem(0.25px);
     }
 }
 
 h5,
 .#{$prefix}--type-h5 {
-    @include typescale('h5');
+    @include typescale('body1');
     line-height: normal;
     font-weight: 600;
 
@@ -202,9 +211,9 @@ h5,
 
 h6,
 .#{$prefix}--type-h6 {
-    @include typescale('h6');
-    line-height: normal;
+    @include typescale('body1');
     letter-spacing: rem(0.15px);
+    line-height: normal;
     font-weight: 600;
 
     @include breakpoint(bp--sm) {

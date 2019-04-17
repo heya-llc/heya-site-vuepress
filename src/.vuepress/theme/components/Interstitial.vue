@@ -10,3 +10,13 @@ export default {
   props: ['alternate', 'interstitial',]
 }
 </script>
+
+<style lang="scss">
+@import '../styles/colors';
+@import '../styles/layout';
+@import '../styles/spacing';
+
+.interstitial {
+  padding: $layout-md $spacing-md;
+}
+</style>
