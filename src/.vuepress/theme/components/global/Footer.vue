@@ -1,10 +1,10 @@
 <template>
     <footer class="site-footer">
         <p class="heya--type-body1">
-            <Logo />
-            Connecting the dots between insights and execution can be a daunting proposition.
-            Let’s work together to bring realistic solutions to the table and look smart in the 
-            process. <strong>Let’s talk soon!</strong>
+          <Logo />
+          Connecting the dots between insights and execution can be a daunting proposition.
+          Let’s work together to bring realistic solutions to the table and look smart in the 
+          process. <strong>Let’s talk soon!</strong>
         </p>
         <p class="heya--type-body1">
           <Icon />
@@ -27,9 +27,12 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../../styles/colors';
+@import '../../styles/layout';
 @import '../../styles/spacing';
 
 .site-footer {
-  padding: 0 $spacing-md;
+  padding: 0 $spacing-xl;
+  grid-column: left-gutter / end;
 }
 </style>

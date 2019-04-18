@@ -161,6 +161,7 @@ h1,
 
 h2,
 .#{$prefix}--type-h2 {
+    margin: .5ex 0 1ex 0;
     @include typescale('h4');
     line-height: rem(33px);
     letter-spacing: rem(0.25px);

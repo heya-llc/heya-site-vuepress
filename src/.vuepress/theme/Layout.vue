@@ -1,14 +1,10 @@
 <template>
   <div
-    class="theme-container"
+    class="container"
     :class="pageClasses"
   >
     <Header />
-    <div
-      v-if="$page.frontmatter.layout"
-    >
-      <component :is="layout"/>
-    </div>
+    <component v-if="$page.frontmatter.layout" :is="layout"/>
     <Footer />
   </div>
 </template>
@@ -48,3 +44,14 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+@import './styles/colors';
+@import './styles/layout';
+@import './styles/spacing';
+
+.container {
+  display: block;
+  max-width: 100vw;
+}
+</style>

@@ -1,12 +1,17 @@
 <template>
     <section class="interstitial">
-        <h2 class="heya--type-h5">Feeling inspired to strike up a conversation?</h2>
-        <p class="cta heya--type-button"><a href="#">Get something on the books.</a></p>
+        <h2 class="heya--type-h5">{{interstitial.header}}</h2>
+        <CTA v-bind:link="interstitial.link" v-bind:text="interstitial.cta" />
     </section>
 </template>
 
 <script>
+import CTA from './global/CTA.vue'
+
 export default {
+  components: {
+    CTA
+  },
   props: ['alternate', 'interstitial',]
 }
 </script>
@@ -17,6 +22,7 @@ export default {
 @import '../styles/spacing';
 
 .interstitial {
-  padding: $layout-md $spacing-md;
+  padding: $layout-md $spacing-xl;
+  text-align: center;
 }
 </style>
