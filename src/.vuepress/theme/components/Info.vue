@@ -65,6 +65,11 @@ export default {
   grid-column-gap: 1rem;
   padding: $layout-lg $spacing-xl;
 
+    @include breakpoint(bp--xl) {
+        padding-left: $layout-lg;
+        padding-right: $layout-lg;
+    }
+
     .info__header {
         color: $gold-foil;
     }

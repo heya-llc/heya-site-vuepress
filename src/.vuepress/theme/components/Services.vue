@@ -26,7 +26,7 @@ export default {
   methods: {
 
     iconClass (icon) {
-        return 'service__icon--' + icon
+        return 'services__icon--' + icon
     },
 
   }
@@ -53,6 +53,15 @@ export default {
 }
 
 .services__icon {
+    display: block;
+    margin: $spacing-lg 0 0 0;
+    width: 68px;
+    height: 68px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    content: "";
+
     grid-column: service-icon / end;
 
     @include breakpoint(bp--lg) {
@@ -60,7 +69,24 @@ export default {
     }
 }
 
+.services__icon--consulting {
+    background-image: url("../styles/images/icon-consulting.svg");
+}
+
+.services__icon--ux {
+    background-image: url("../styles/images/icon-ux.svg");
+}
+
+.services__icon--communication {
+    background-image: url("../styles/images/icon-communication.svg");
+}
+
+.services__icon--coaching {
+    background-image: url("../styles/images/icon-coaching.svg");
+}
+
 .services__header {
+    margin-bottom: 0;
     grid-column: service-icon / end;
 
     @include breakpoint(bp--lg) {

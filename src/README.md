@@ -1,6 +1,6 @@
 ---
 layout: Home
-title: Welcome
+title: Experience Engineering, Digital Product and Team Scaling
 sections:
 - 
     type: info
@@ -85,7 +85,7 @@ sections:
     type: interstitial
     header: Not sure where to start on your next digital project?
     cta: Let’s figure it out together.
-    link: /calendly
+    link: https://calendly.com/heyallc/coffee
 -
     type: info
     alternate: true
@@ -94,7 +94,7 @@ sections:
         header: And if you really like minutia...
     jump:
         header: Ready to chat?
-        link: #
+        link: https://calendly.com/heyallc/coffee
         cta: Check availability and get a meet-up on the books.
     features:
         alternate: true
@@ -156,7 +156,7 @@ sections:
     type: interstitial
     header: Feeling inspired to strike up a conversation? 
     cta: Let’s grab a coffee!
-    link: /calendly
+    link: https://calendly.com/heyallc/coffee
 ---
 # heya-site-vuepress
 

@@ -9,11 +9,8 @@
 @import '../../styles/layout';
 
 .logo-icon {
-    display: inline-block;
-    max-width: 100%;
-
-    @include breakpoint(bp--sm) {
-        max-width: 33.333%;
-    }
+    display: block;
+    width: auto;
+    max-height: 2.6ex;
 }
 </style>

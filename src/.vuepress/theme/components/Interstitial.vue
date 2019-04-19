@@ -24,5 +24,10 @@ export default {
 .interstitial {
   padding: $layout-md $spacing-xl;
   text-align: center;
+
+    @include breakpoint(bp--xl) {
+        padding-left: $layout-lg;
+        padding-right: $layout-lg;
+    }
 }
 </style>
