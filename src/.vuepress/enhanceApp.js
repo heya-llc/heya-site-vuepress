@@ -8,13 +8,11 @@ export default ({
     }) => {
     // ...apply enhancements to the app
 
-    if (typeof process !== 'undefined' && process.isClient) {
-        Vue.use(VueGtm, {
-            id: 'GTM-5NXFLKJ', // Your GTM ID
-            enabled: true, // defaults to true. Plugin can be disabled by setting this to false for Ex: enabled: !!GDPR_Cookie (optional)
-            debug: false, // Whether or not display console logs debugs (optional)
-            vueRouter: router, // Pass the router instance to automatically sync with router (optional)
-            // ignoredViews: ['homepage'] // If router, you can exclude some routes name (case insensitive) (optional)
-        });
-    }
+    Vue.use(VueGtm, {
+        id: 'GTM-5NXFLKJ', // Your GTM ID
+        enabled: true, // defaults to true. Plugin can be disabled by setting this to false for Ex: enabled: !!GDPR_Cookie (optional)
+        debug: false, // Whether or not display console logs debugs (optional)
+        // vueRouter: router, // Pass the router instance to automatically sync with router (optional)
+        // ignoredViews: ['homepage'] // If router, you can exclude some routes name (case insensitive) (optional)
+    });
 }
