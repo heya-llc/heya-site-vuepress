@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "eslint-plugin-vue-libs": "^3.0.0",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "vue-gtm": "^2.0.0"
   }
 }
